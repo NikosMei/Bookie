@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container_html {
+            margin: 0 auto;
+            
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .comparison-table {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .comparison-table .card {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .comparison-table .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .comparison-table .card .title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .comparison-table .card .price {
+            font-size: 36px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .comparison-table .card .feature-list {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .comparison-table .card .feature-list li {
+            margin-bottom: 10px;
+        }
+
+
+        .comparison-table .card .cta-button:hover {
+            background-color: #555;
+        }
+
+        .buybutton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30vh; /* Set the height of the container to the full viewport height */
+        }
+
+
+
+
+        @media (max-width: 600px) {
+            .comparison-table {
+                grid-template-columns: 1fr;
+            }
+        }
+
+</style>
+<head>
+    <title>Bookie - Your Book Destination</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/indexcss">
+</head>
+
+<body>
+    <header>
+        <a href="http://localhost:8080" class="title">
+          Bookie
+        </a>
+        <section class="login_section">
+          <a href="http://localhost:8080/login" class="button1 bouncy">
+            Login
+          </a>
+          <a href="http://localhost:8080/logout" class="button1 bouncy" style="animation-delay:0.07s">
+            Logout
+          </a>
+        </section>
+        <a href="http://localhost:8080/upload" class="upload_book">
+          Upload a Book
+        </a>
+      </header>
+    
+      <div class="container">
+        <div class="container1">
+        <div class="category-wrapper">
+            <div class="category-btn" onmouseover="showCategories()" onmouseout="hideCategories()">Categories </div>
+        
+          <ul class="categories" onmouseover="showCategories()" onmouseout="hideCategories()">
+            <li><a href="http://localhost:8080/category?query=Classic">Classic</a></li>
+            <li><a href="http://localhost:8080/category?query=Fantasy">Fantasy</a></li>
+            <li><a href="http://localhost:8080/category?query=Romance">Romance</a></li>
+            <li><a href="http://localhost:8080/category?query=Novel">Novel</a></li>
+            <li><a href="http://localhost:8080/category?query=Coming-Of-Age">Coming-Of-Age</a></li>
+            <li><a href="http://localhost:8080/category?query=Horror">Horror</a></li>
+            <li><a href="http://localhost:8080/category?query=Fiction">Fiction</a></li>
+            <li><a href="http://localhost:8080/category?query=Science">Science</a></li>
+            <li><a href="http://localhost:8080/category?query=Literary">Literary</a></li>
+            <li><a href="http://localhost:8080/category?query=Adventure">Adventure</a></li>
+            <li><a href="http://localhost:8080/category?query=Comedy">Comedy</a></li>
+            <li><a href="http://localhost:8080/category?query=Historical">Historical</a></li>
+            <li><a href="http://localhost:8080/category?query=Picaresque">Picaresque</a></li>
+            <li><a href="http://localhost:8080/category?query=Drama">Drama</a></li>
+            <li><a href="http://localhost:8080/category?query=Autobiography">Autobiography</a></li>
+            <li><a href="http://localhost:8080/category?query=Tragedy">Tragedy</a></li>
+            <li><a href="http://localhost:8080/category?query=Detective">Detective</a></li>
+            <li><a href="http://localhost:8080/category?query=Non-Fiction">Non-Fiction</a></li>
+          </ul>
+        </div>
+      </div>
+
+        <main>
+            <section class="search-section">
+                <h2>Find Your Next Book</h2>
+                <form action="http://localhost:8080/search?" method="GET">
+                    <input type="text" name="query" placeholder="Search...">
+                    <button type="submit" class="search-button">Search</button>
+                </form>
+            </section>
+            <br><br><br>
+            <h1>Membership Comparison</h1>
+            <br><br><br><br><br><br>
+            <section id="book-list" >
+
+                <div class="container_html" style="margin-right: 0vw;">
+                    
+                    <div class="comparison-table" >
+                        <div class="card">
+                            <div class="title">Free</div>
+                            <div class="price">Free</div>
+                            <ul class="feature-list">
+                                <li>Access to a limited library of content</li>
+                                <li>No audiobooks</li>
+                                <li>Advertisements</li>
+                                <li>Not promoting your work </li>
+                            </ul>
+                            
+                        </div>
+                        <div class="card">
+                            <div class="title">Premium</div>
+                            <div class="price">$9.99/month</div>
+                            <ul class="feature-list">
+                                <li>Access to an extensive library of content</li>
+                                <li>High Quality Audiobooks</li>
+                                <li>No advertisements</li>
+                                <li>Promotion of your Books</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="buybutton">
+             
+                    <a href="http://localhost:8080/pay" class="cta-button" style="display: inline-block;  
+                    background-color: #333;color: #fff;text-decoration: none; 
+                    padding: 10px 20px;  border-radius: 4px;transition: 
+                    background-color 0.3s;">Upgrade to Premium</a>
+              </div>
+              
+            
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Bookie. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="http://localhost:8080/categoryjs"></script>
+</body>
+
+</html>

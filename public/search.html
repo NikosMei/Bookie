@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bookie - Your Book Destination</title>
+  <link rel="stylesheet" type="text/css" href="http://localhost:8080/indexcss">
+</head>
+
+<body>
+  <header>
+    <a href="http://localhost:8080" class="title">
+      Bookie
+    </a>
+    <section class="login_section">
+      <a href="http://localhost:8080/logout" class="button1 bouncy" style="animation-delay:0.07s">
+        Logout
+      </a>
+    </section>
+    <a href="http://localhost:8080/upload" class="upload_book">
+      Upload a Book
+    </a>
+  </header>
+
+  <div class="container">
+    <div class="container2">
+    <div class="category-wrapper">
+      <div class="category-btn" onmouseover="showCategories()" onmouseout="hideCategories()">Categories </div>
+    
+      <ul class="categories" onmouseover="showCategories()" onmouseout="hideCategories()">
+        <li><a href="http://localhost:8080/category?query=Classic">Classic</a></li>
+        <li><a href="http://localhost:8080/category?query=Fantasy">Fantasy</a></li>
+        <li><a href="http://localhost:8080/category?query=Romance">Romance</a></li>
+        <li><a href="http://localhost:8080/category?query=Novel">Novel</a></li>
+        <li><a href="http://localhost:8080/category?query=Coming-Of-Age">Coming-Of-Age</a></li>
+        <li><a href="http://localhost:8080/category?query=Horror">Horror</a></li>
+        <li><a href="http://localhost:8080/category?query=Fiction">Fiction</a></li>
+        <li><a href="http://localhost:8080/category?query=Science">Science</a></li>
+        <li><a href="http://localhost:8080/category?query=Literary">Literary</a></li>
+        <li><a href="http://localhost:8080/category?query=Adventure">Adventure</a></li>
+        <li><a href="http://localhost:8080/category?query=Comedy">Comedy</a></li>
+        <li><a href="http://localhost:8080/category?query=Historical">Historical</a></li>
+        <li><a href="http://localhost:8080/category?query=Picaresque">Picaresque</a></li>
+        <li><a href="http://localhost:8080/category?query=Drama">Drama</a></li>
+        <li><a href="http://localhost:8080/category?query=Autobiography">Autobiography</a></li>
+        <li><a href="http://localhost:8080/category?query=Tragedy">Tragedy</a></li>
+        <li><a href="http://localhost:8080/category?query=Detective">Detective</a></li>
+        <li><a href="http://localhost:8080/category?query=Non-Fiction">Non-Fiction</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="black-rectangle" style="margin-top: 30px;">ad</div>
+
+    <main>
+      <section class="search-section">
+        <h2>Find Your Next Book</h2>
+        <form action="http://localhost:8080/search?" method="GET">
+          <input type="text" name="query" placeholder="Search...">
+          <button type="submit" class="search-button">Search</button>
+        </form>
+      </section>
+
+      <section id="book-list">
+
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Bookie. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+  <script src="http://localhost:8080/searchjs"></script>
+  <script src="http://localhost:8080/adsjs"></script>
+</body>
+
+</html>

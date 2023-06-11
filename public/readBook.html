@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bookie - PDF Reader</title>
+  <link rel="stylesheet" type="text/css" href="http://localhost:8080/readcss">
+</head>
+
+<body>
+  <header>
+    <a href="http://localhost:8080"  class="title">Bookie</a>
+  </header>
+
+  <aside style="height: 0px;"><div class="black-rectangle" style="display:flex;border-top-width: 22px;border-top-style: solid;">ad </div></aside>
+<aside style="height: 0px;"><div class="black-rectangle" style="display:flex;border-top-width: 22px;border-top-style: solid; margin-left: 1714px;">ad </div></aside>
+
+  <main>
+    <section id="pdf-reader">
+      <div class="pdf-container" id="pdf-container">
+        
+      </div>
+    </section>
+
+    <section id="audiobook-listener">
+      <h3>Audio Book</h3>
+      <div class="audiobook-container" id="audiobook-container">
+
+      </div>
+    </section>
+
+    <!-- COMMENTS -->
+    <section id="Comments">
+      <h1>Comments</h1>
+      <form id="comment-form" action="/comments" method="POST">
+        <textarea id="comment" placeholder="Leave a comment" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    
+      <div id="comments-container"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Bookie. All rights reserved.</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+  <script src="http://localhost:8080/readjs"></script>
+  <script src="http://localhost:8080/adsjs"></script>
+</body>
+
+</html>
